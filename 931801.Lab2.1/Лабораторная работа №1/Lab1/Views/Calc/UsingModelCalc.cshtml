@@ -1,0 +1,12 @@
+﻿@model mylist
+@{
+    ViewData["Title"] = "UsingModelCalc";
+}
+
+<h2>UsingModelCalc</h2>
+<div>Первое число: @Model.values[4]</div>
+<div>Второе число: @Model.values[5]</div>
+<div>Сумма: @Model.values[4] + @Model.values[5] = @Model.values[0]</div>
+<div>Разность: @Model.values[4] - @Model.values[5] = @Model.values[1]</div>
+<div>Умножение: @Model.values[4] * @Model.values[5] = @Model.values[2]</div>
+<div>Деление: @Model.values[4] / @Model.values[5] = @Model.values[3]</div>

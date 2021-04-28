@@ -1,0 +1,23 @@
+﻿@inject Lab1.Services.HTMLSender calc
+
+@{
+
+    ViewData["Title"] = "ServiceInjectionCalc";
+}
+
+<h2>ServiceInjectionCalc</h2>
+<div>Первое число: @calc.Value1</div>
+<div>Второе число: @calc.Value2</div>
+<div>Сумма: @calc.Value1 + @calc.Value2 = @calc.add()</div>
+<div>Разность: @calc.Value1 - @calc.Value2 = @calc.sub()</div>
+<div>Умножение: @calc.Value1 * @calc.Value2 = @calc.mult()</div>
+<div>
+    Div: @calc.Value1 / @calc.Value2 = @if (calc.div() == -1)
+    {
+        @: error
+    }
+    else
+    {
+        @calc.div()
+    }
+</div>
